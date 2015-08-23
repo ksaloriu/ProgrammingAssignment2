@@ -19,10 +19,10 @@ makeCacheMatrix <- function(x = matrix()) {
 ## found it is calculated, stored and returned.
 
 cacheSolve <- function(x, ...) {
-    inverse <- x$getinverse()
+    inverse <- x$getInverse()
     if (is.null(inverse)) {
-        inverse <- solve(x$getmatrix())
-        x$setinverse(inverse)
+        inverse <- solve(x$getMatrix())
+        x$setInverse(inverse)
     }
     inverse
 }
